@@ -1,18 +1,43 @@
 body {
   display:grid;
   max-width:1000px;
-  background-color: rgb(253, 250, 253)
+  background-color: white
 
 }
 
 nav {
-  width:1000px;
+  display: flex;
+  height: 250px;
+  width:1200px;
   background:black;
   color: white;
   font-family:Arial, Helvetica, sans-serif;
-  
+  justify-content:right;
+  align-items: center;
+  padding: 0 20px;
+  margin: -100px;
 }
 
+nav2 {
+  display: flex;
+  height: 250px;
+  width:1200px;
+  background:purple;
+  color: white;
+  font-family:Arial, Helvetica, sans-serif;
+  justify-content:center;
+  align-items: center;
+  padding: 0 20px;
+  margin: -100px;
+}
+
+nav h1 {
+  align-items: center;
+  color: #ffefd5;
+  display: flex;
+  padding: 0 20px;
+  width: 1000px;
+}
 
 
 .App {
@@ -21,14 +46,14 @@ nav {
   margin-top: 5rem;
 }
 
-
-
-
-
-
-
-
-
+h4{
+  display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
 
 
 

@@ -1,79 +1,50 @@
-import React, {Component} from "react"
-import { BrowserRouter as Route, Routes, withRouter, Link } from "react-router-dom"
-import { OktaAuth, toRelativeUrl } from '@okta/okta-auth-js';
-import { LoginCallback, Security, SecureRoute } from '@okta/okta-react';
-import Secure from './Components/Secure';
-import Header from "./Components/Header"
-import Footer from "./Components/Footer"
-import Collect from "./Components/Collect"
-import About from "./Components/About"
-import "./App.css"
+import React from "react";
+import { Route, Routes, Link } from "react-router-dom";
+import header from "./Components/header";
+import Footer from "./Components/Footer";
+import Collect from "./Components/Collect";
+import About from "./Components/About";
 
-
-const oktaAuth = new OktaAuth({
-  issuer: 'https://https://dev-61688829.okta.com/oauth2/default',
-  clientId: '0oa55xgso1NUsEvgS5d7',
-  redirectUri: window.location.origin + '/login/callback'
-});
-
-class App extends Component {
-
-  constructor(props) {
-    super(props);
-    this.restoreOriginalUri = async (_oktaAuth, originalUri) => {
-      props.history.replace(toRelativeUrl(originalUri || '/', window.location.origin));
-    };
-  }
-
-  render() {
-    return (
-      <Security oktaAuth={oktaAuth} restoreOriginalUri={this.restoreOriginalUri}>
-        <Route path="/" exact={true} component={Secure}/>
-        <Route path="/login/callback" component={LoginCallback}/>
-      </Security>
-    );
-  }
-}
-
-const AppWithRouterAccess = withRouter(App);
-
-class RouterApp extends Component {
-  render() {
-    return (<Router><AppWithRouterAccess/></Router>);
-  }
-}
+import "./App.css";
 
 
 
-function AppArrange() {
-  return (
-    <div className="AppArrange">
+const App = () => {
+   return (
+    <div className="App">
             <nav>
-                <Link to ="/">Home</Link>
-                <div>
-                    <Link to="/"><h4>Home</h4></Link>
-                    <Link to="/About"><h4>About</h4></Link>
+
+                <div class=".container-1" >
+                    <Link to= "/">Home</Link>
+                    <Link to="/Home/"><h4>Home</h4></Link>
+                    <Link to="/About/"><h4>About</h4></Link>
                 </div>
             </nav>
-            <Header />
+            <nav2>
+                <div class=".container-2">
+                    <Link to="/Discover/"><h4>Discover</h4></Link>
+                    <Link to="/Experience/"><h4>Experience</h4></Link>
+                    <Link to="/Collect/"><h4>Collect</h4></Link>
+                    <Link to="/Share/"><h4>Share</h4></Link>
+                </div>
+            </nav2>
+
+            <header />
             <main>
 
-            <Routes>
-  
-                <Route path = "/About/" element={<About />}></Route>
+            <Routes>         
+                <Route path = "/" element = {<header />}><Route index element={<><scrollToTop /></>}/></Route>
+                <Route path = "/About" element={<About />}></Route>
                 <Route path = "/Collect/" element={<Collect />}></Route>
                 {/* <Route path = "/Experience/" element={<Experience />}></Route>
                 <Route path = "/Share/" element={<Share />}></Route> */}
-                <Route path = "/Footer/" element = {<Footer />} />
-                
+                <Route path = "/Footer/" element = {<Footer />} />  
                 {/* <Route path = "/ResultList/:Recipe" element={<Recipe/>}/> */}
                 {/* <Route path = "/ResultList/" element={<ResultList recipes={recipes}/>}/> */}
-           
             </Routes>
             </main>
         </div>
 
     );
 }
-export default RouterApp;
-// export default App;
+export default App;

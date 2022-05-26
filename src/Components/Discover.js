@@ -9,6 +9,7 @@ function App() {
   const [rating, setRating] = useState("");
   const [varietal, setVarietal] = useState("");
   const [vineyard, setVineyard] = useState("");
+  const [vintage, setVintage] = useState("");
   const [country, setCountry] = useState("");
   const [region, setRegion] = useState("");
   const [notes, setNotes] = useState("");
@@ -30,6 +31,7 @@ function App() {
           rating: rating,
           varietal: varietal,
           vineyard: vineyard,
+          vintage:vintage,
           country: country,
           region: region,
           notes: notes,
@@ -46,6 +48,7 @@ function App() {
         setRating("");
         setVarietal("");
         setVineyard("");
+        setVintage("");
         setCountry("");
         setRegion("");
         setNotes("");
@@ -97,6 +100,12 @@ function App() {
             type="text"
             value={vineyard}
             placeholder="Vineyard"
+            onChange={(e) => setVineyard(e.target.value)}
+         />
+        <input
+            type="text"
+            value={vintage}
+            placeholder="Vintage"
             onChange={(e) => setVineyard(e.target.value)}
          />
         <input

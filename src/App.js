@@ -34,6 +34,7 @@ const App = () => {
             <main>
 
             <Routes>         
+
                 <Route path = "/" element = {<header />}><Route index element={<><scrollToTop /></>}/></Route>
                 <Route path = "/About" element={<About />}></Route>
                 <Route path = "/Collect/" element={<Collect />}></Route>
@@ -41,8 +42,8 @@ const App = () => {
                 <Route path = "/Experience/" element={<Experience />}></Route>
                 <Route path = "/Share/" element={<Share />}></Route>
                 <Route path = "/Footer/" element = {<Footer />} />  
-                {/* <Route path = "/ResultList/:Recipe" element={<Recipe/>}/> */}
-                {/* <Route path = "/ResultList/" element={<ResultList recipes={recipes}/>}/> */}
+
+
             </Routes>
             </main>
         </div>

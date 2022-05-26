@@ -7,6 +7,7 @@ import Collect from "./Components/Collect.js";
 import Share from "./Components/Share.js";
 import About from "./Components/About.js";
 import Footer from "./Components/Footer.js";
+import Images from "./Images/vinote.png";
 
 import "./App.css";
 
@@ -17,7 +18,7 @@ const App = () => {
     <div className="App">
         
             <title>
-                    <img src="./src/Images/vinote.png" alt="logo" className="logo"/>
+                    <img src={Images} alt="logo" className="logo"/>
                     <Link to= "/">Home</Link>
                     <Link to="/Home/"><h4>Home</h4></Link>
             </title>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes, Link } from "react-router-dom";
-import header from "./Components/hgit pueader.js";
+import header from "./Components/header.js";
 import Discover from "./Components/Discover.js";
 import Experience from "./Components/Experience.js";
 import Collect from "./Components/Collect.js";

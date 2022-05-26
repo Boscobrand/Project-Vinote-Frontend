@@ -24,14 +24,14 @@ function App() {
   let handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      let res = await fetch("TBD", {
+      let res = await fetch("mongodb://localhost/user-api", {
         method: "POST",
         body: JSON.stringify({
           name: name,
           rating: rating,
           varietal: varietal,
           vineyard: vineyard,
-          vintage:vintage,
+          vintage: vintage,
           country: country,
           region: region,
           notes: notes,
@@ -71,7 +71,7 @@ function App() {
   return (
     <div className="App" id="formflow">
         
-        <h2>Congratulations!</h2>;
+        <h2>Congratulations!</h2>
 
         <p> You've discovered another wine label! </p>
         <p> Please follow the prompts below to tell us all about it. </p>
@@ -106,7 +106,7 @@ function App() {
             type="text"
             value={vintage}
             placeholder="Vintage"
-            onChange={(e) => setVineyard(e.target.value)}
+            onChange={(e) => setVintage(e.target.value)}
          />
         <input
             type="text"
@@ -141,7 +141,7 @@ function App() {
         <input
             type="text"
             value={who_with}
-            placeholder="WHo were you with?"
+            placeholder="Who were you with?"
             onChange={(e) => setWho_with(e.target.value)}
         />
          <input

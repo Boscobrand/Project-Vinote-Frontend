@@ -1,5 +1,8 @@
-import "./App.css";
+import React from 'react'
 import { useState } from "react";
+// import { Route, Routes, Link } from "react-router-dom"
+// import "src/App.css";
+
 
 function App() {
   const [name, setName] = useState("");
@@ -65,9 +68,10 @@ function App() {
   return (
     <div className="App">
         <h2>Congratulations!</h2>;
-        <p> You've discovered another wine label!<p>
-       </p> Please follow the prompts below to tell us all about it.</p>;
-        <p> We'll be certain to record this new entry for you.</p>;
+
+        <p> You've discovered another wine label! </p>
+        <p> Please follow the prompts below to tell us all about it. </p>
+        <p> We'll be certain to record this new entry for you. </p>
 
       <form onSubmit={handleSubmit}>
         <input
@@ -143,12 +147,17 @@ function App() {
             onChange={(e) => setReminder(e.target.value)}
         />
 
-
+        </form>
+        
         <button type="submit">Add Wine</button>
-
+        
+        
         <div className="message">{message ? <p>{message}</p> : null}</div>
-      </form>
-    </div>
+      </div>
+
+
+
+    
   );
 }
 

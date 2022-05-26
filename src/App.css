@@ -1,34 +1,50 @@
 body {
-  display:grid;
+  display:flex;
   max-width:1000px;
   background-color: white
 
 }
+.logo {
+  display:flex;
+  position:absolute; left:0; top:50;
+  align-content:center;
+  margin-left: 50px;
+  margin-top:50px;
+  height:40px;
+  width:auto;
 
-nav {
-  display: flex;
+}
+title {
+  display:flex;
+  position:fixed;
   height: 250px;
-  width:1200px;
+  width: 1200px;
   background:black;
   color: white;
   font-family:Arial, Helvetica, sans-serif;
   justify-content:right;
   align-items: center;
-  padding: 0 20px;
-  margin: -100px;
+  margin-top: -100px;
+  margin-left:-10px;
 }
 
-nav2 {
+nav {
   display: flex;
-  height: 250px;
-  width:1200px;
+  position: fixed;
+  height: 70px;
+  width: 1200px;
   background:purple;
   color: white;
   font-family:Arial, Helvetica, sans-serif;
-  justify-content:center;
-  align-items: center;
-  padding: 0 20px;
-  margin: -100px;
+  font-size: 20px;
+  justify-content:right;
+  align-items: left;
+  margin-top:100px;
+  margin-left:-10px;
+}
+
+nav:hover {
+  background:#36a936
 }
 
 nav h1 {
@@ -39,23 +55,32 @@ nav h1 {
   width: 1000px;
 }
 
+h2 {
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:12px;
+  color:black;
 
-.App {
+
+}
+
+
+
+.Form {
   display: flex;
   justify-content: center;
   margin-top: 5rem;
 }
 
 h4{
-  display: block;
+  display:inline-block;
+  color:white;
   margin-block-start: 1.33em;
   margin-block-end: 1.33em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
+  padding-right:30px;
 }
-
-
 
 input {
   display: block;
@@ -75,7 +100,7 @@ button {
   cursor: pointer;
 }
 button:hover {
-  background-color: #c5c5c5;
+  background-color: #1fca13;
 }
 .message {
   font-size: 1.2em;

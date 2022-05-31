@@ -75,12 +75,12 @@ function Discover() {
         <input
           type="text"
           value={name}
-          placeholder="Name"
+          placeholder="Name of Wine"
           onChange={(e) => setName(e.target.value)} />
         <input
           type="text"
           value={rating}
-          placeholder="Rating"
+          placeholder="Your Rating (1 to  5 where 5 = highest)"
           onChange={(e) => setRating(e.target.value)} />
         <input
           type="text"

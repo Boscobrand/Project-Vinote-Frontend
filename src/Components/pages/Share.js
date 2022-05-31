@@ -1,13 +1,15 @@
+// import React from "react";
+// import { Route, Routes, Link } from "react-router-dom";
+// // import header from "./Components/header.js";
+// import Discover from "./Components/Discover.js";
+// import Experience from "./Components/Experience.js";
+// import Collect from "./Components/Collect.js";
+// import Share from "./Components/Share.js";
+// import About from "./Components/About.js";
+// import Footer from "./Components/Footer.js";
+// import Images from "./Images/vinote.png";
 
-
-
-
-
-
-
-
-
-
+// import "./App.css";
 
 
 // Add to submit form
@@ -26,13 +28,6 @@
  
     
     
-
-
-
-
-
-
-
 
 
 
@@ -70,7 +65,6 @@
 
 
 
-// //-or- <a href="sms:(countrycode)(number)"> Text </a>
 
 
 

@@ -18,16 +18,17 @@ function Discover() {
   const [when, setWhen] = useState("");
   const [reminder, setReminder] = useState("");
   const [message,setMessage] = useState("");
+  
+  
   // await fetch("mongodb://localhost/User"
+//   const data = await axios.post('http://localhost:5000/api/User')
 
-  // const postButton = async()=> {
-  //   const results = 
 
   
   let handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      let res = await axios.post("http://localhost:5000/api/User/",{
+      let res = await axios.post("http://localhost:5000//api/User",{
         name: name,
         rating: rating,
         varietal: varietal,
@@ -71,79 +72,79 @@ function Discover() {
 
   return (
     <div className="App" id="formflow">
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={name}
-          placeholder="Name of Wine"
-          onChange={(e) => setName(e.target.value)} />
-        <input
-          type="text"
-          value={rating}
-          placeholder="Your Rating (1 to  5 where 5 = highest)"
-          onChange={(e) => setRating(e.target.value)} />
-        <input
-          type="text"
-          value={varietal}
-          placeholder="Varietal"
-          onChange={(e) => setVarietal(e.target.value)} />
-        <input
-          type="text"
-          value={vineyard}
-          placeholder="Vineyard"
-          onChange={(e) => setVineyard(e.target.value)} />
-        <input
-          type="text"
-          value={vintage}
-          placeholder="Vintage"
-          onChange={(e) => setVintage(e.target.value)} />
-        <input
-          type="text"
-          value={country}
-          placeholder="Country"
-          onChange={(e) => setCountry(e.target.value)} />
-        <input
-          type="text"
-          value={region}
-          placeholder="Region"
-          onChange={(e) => setRegion(e.target.value)} />
-        <input
-          type="text"
-          value={notes}
-          placeholder="Notes"
-          onChange={(e) => setNotes(e.target.value)} />
-        <input
-          type="text"
-          value={likes}
-          placeholder="Likes"
-          onChange={(e) => setLikes(e.target.value)} />
-        <input
-          type="text"
-          value={location}
-          placeholder="Location"
-          onChange={(e) => setLocation(e.target.value)} />
-        <input
-          type="text"
-          value={who_with}
-          placeholder="Who were you with?"
-          onChange={(e) => setWho_with(e.target.value)} />
-        <input
-          type="text"
-          value={when}
-          placeholder="When?"
-          onChange={(e) => setWhen(e.target.value)} />
-        <input
-          type="text"
-          value={reminder}
-          placeholder="Would you like a reminder? (Yes/No)"
-          onChange={(e) => setReminder(e.target.value)} />
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={name}
+            placeholder="Name of Wine"
+            onChange={(e) => setName(e.target.value)} />
+          <input
+            type="text"
+            value={rating}
+            placeholder="Your Rating (1 to  5 where 5 = highest)"
+            onChange={(e) => setRating(e.target.value)} />
+          <input
+            type="text"
+            value={varietal}
+            placeholder="Varietal"
+            onChange={(e) => setVarietal(e.target.value)} />
+          <input
+            type="text"
+            value={vineyard}
+            placeholder="Vineyard"
+            onChange={(e) => setVineyard(e.target.value)} />
+          <input
+            type="text"
+            value={vintage}
+            placeholder="Vintage"
+            onChange={(e) => setVintage(e.target.value)} />
+          <input
+            type="text"
+            value={country}
+            placeholder="Country"
+            onChange={(e) => setCountry(e.target.value)} />
+          <input
+            type="text"
+            value={region}
+            placeholder="Region"
+            onChange={(e) => setRegion(e.target.value)} />
+          <input
+            type="text"
+            value={notes}
+            placeholder="Notes"
+            onChange={(e) => setNotes(e.target.value)} />
+          <input
+            type="text"
+            value={likes}
+            placeholder="Likes"
+            onChange={(e) => setLikes(e.target.value)} />
+          <input
+            type="text"
+            value={location}
+            placeholder="Location"
+            onChange={(e) => setLocation(e.target.value)} />
+          <input
+            type="text"
+            value={who_with}
+            placeholder="Who were you with?"
+            onChange={(e) => setWho_with(e.target.value)} />
+          <input
+            type="text"
+            value={when}
+            placeholder="When?"
+            onChange={(e) => setWhen(e.target.value)} />
+          <input
+            type="text"
+            value={reminder}
+            placeholder="Would you like a reminder? (Yes/No)"
+            onChange={(e) => setReminder(e.target.value)} />
 
-      </form>
+        </form>
 
-      <button onClick={(e) => handleSubmit(e)}>Add Wine</button>
-      <div className="message">{message ? <p>{message}</p> : null}</div>
+        <button onClick={(e) => handleSubmit(e)}>Add Wine</button>
+        <div className="message">{message ? <p>{message}</p> : null}</div>
 
-    </div>
+      </div>
 
   );
 }

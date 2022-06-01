@@ -27,26 +27,44 @@ function Discover() {
   
   let handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      let res = await axios.post("http://localhost:5000//api/User",{
-        name: name,
-        rating: rating,
-        varietal: varietal,
-        vineyard: vineyard,
-        vintage: vintage,
-        country: country,
-        region: region,
-        notes: notes,
-        likes:likes,
-        location:location,
-        who_with: who_with,
-        when:when,
-        reminder:reminder
-      } ); 
+    console.log(`
+      name: ${name},
+      rating: ${rating},
+      varietal: ${varietal},
+      vineyard: ${vineyard},
+      vintage: ${vintage},
+      country:${country},
+      region: ${region},
+      notes: ${notes},
+      likes:${likes},
+      location:${location},
+      who_with: ${who_with},
+      when: ${when},
+      reminder: ${reminder}`)
       
-      let resJson = await res.json();
-      if (res.status === 200) {
-        setName("");
+    // try {
+      // let res = await axios.post("http://localhost:5001/api/User",{
+      axios.post("http://localhost:5001/api/User",{  
+          name: name,
+          rating: rating,
+          varietal: varietal,
+          vineyard: vineyard,
+          vintage: vintage,
+          country: country,
+          region: region,
+          notes: notes,
+          likes:likes,
+          location:location,
+          who_with: who_with,
+          when:when,
+          reminder:reminder
+        }
+      ) 
+      
+      // let resJson = await res.json();
+      // if (res.status === 200) {
+      .then( res => {
+      setName("");
         setRating("");
         setVarietal("");
         setVineyard("");
@@ -61,18 +79,23 @@ function Discover() {
         setReminder("");
 
         setMessage("Wine profile created successfully");
-      } else {
-        setMessage("Some error occured");
-      }
-      console.log(resJson)
-    } catch (err) {
-      console.log(err);
-    }
-  };
+    })
+      // } else {
+      //   setMessage("Some error occured");
+      // }
+    //   console.log(resJson)
+    // } 
+    .catch(err => {
+      console.log(err)
+    });
+    //   console.log(err);
+    // }
+  
+};
 
   return (
     <div className="App" id="formflow">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} method="post">
           <input
             type="text"
             value={name}

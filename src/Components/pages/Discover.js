@@ -44,7 +44,8 @@ function Discover() {
       
     // try {
       // let res = await axios.post("http://localhost:5001/api/User",{
-      axios.post("http://localhost:5001/api/User",{  
+      // axios.post("http://localhost:5001/api/User",{  
+      axios.post("https://vinote74.herokuapp.com/",{    
           name: name,
           rating: rating,
           varietal: varietal,

@@ -1,6 +1,5 @@
 // import { Router } from 'express';
-import React from 'react'
-import { useState } from "react";
+import React, { useState } from 'react';
 import axios from 'axios'
 
 function Discover() {
@@ -21,7 +20,7 @@ function Discover() {
   
   
   // await fetch("mongodb://localhost/User"
-//   const data = await axios.post('http://localhost:5000/api/User')
+//   const data = await axios.post('http://localhost:5002/api/User')
 
 
   
@@ -44,8 +43,8 @@ function Discover() {
       
     // try {
       // let res = await axios.post("http://localhost:5001/api/User",{
-      // axios.post("http://localhost:5001/api/User",{  
-      axios.post("https://vinote74.herokuapp.com/",{    
+    axios.post("http://localhost:5002/entry/", {  
+      // axios.post("https://vinote74.herokuapp.com/",{    
           name: name,
           rating: rating,
           varietal: varietal,
